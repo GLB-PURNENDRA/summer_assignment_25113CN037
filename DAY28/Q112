@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+struct Hotel
+{
+    int roomNo;
+    char guestName[50];
+    int days;
+    float rent;
+};
+
+int main()
+{
+    struct Hotel h;
+
+    printf("Enter Room Number: ");
+    scanf("%d", &h.roomNo);
+
+    printf("Enter Guest Name: ");
+    scanf(" %[^\n]", h.guestName);
+
+    printf("Enter Number of Days: ");
+    scanf("%d", &h.days);
+
+    printf("Enter Rent per Day: ");
+    scanf("%f", &h.rent);
+
+    float total = h.days * h.rent;
+
+    printf("\n----- Hotel Bill -----\n");
+    printf("Room Number : %d\n", h.roomNo);
+    printf("Guest Name  : %s\n", h.guestName);
+    printf("Days Stayed : %d\n", h.days);
+    printf("Rent/Day    : %.2f\n", h.rent);
+    printf("Total Bill  : %.2f\n", total);
+
+    return 0;
+}

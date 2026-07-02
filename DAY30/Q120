@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+    FILE *fp;
+
+    fp = fopen("student_record.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("File could not be opened.");
+        return 0;
+    }
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &s.roll);
+
+    printf("Enter Name: ");
+    scanf(" %[^\n]", s.name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s.marks);
+
+    fprintf(fp, "Roll Number : %d\n", s.roll);
+    fprintf(fp, "Name        : %s\n", s.name);
+    fprintf(fp, "Marks       : %.2f\n", s.marks);
+
+    fclose(fp);
+
+    printf("Student record saved successfully.");
+
+    return 0;
+}

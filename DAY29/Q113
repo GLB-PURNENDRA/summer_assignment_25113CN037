@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+
+    fp = fopen("student.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("File could not be created.");
+        return 0;
+    }
+
+    printf("File created successfully.");
+
+    fclose(fp);
+
+    return 0;
+}

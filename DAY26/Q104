@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int answer, score = 0;
+
+    printf("===== Simple Quiz =====\n");
+
+    printf("\nQ1. What is the capital of India?\n");
+    printf("1. Mumbai\n2. New Delhi\n3. Kolkata\n4. Chennai\n");
+    printf("Enter your answer: ");
+    scanf("%d", &answer);
+
+    if(answer == 2)
+        score++;
+
+    printf("\nQ2. Which language is used for C programming?\n");
+    printf("1. Compiler\n2. Interpreter\n3. C Language\n4. Python\n");
+    printf("Enter your answer: ");
+    scanf("%d", &answer);
+
+    if(answer == 3)
+        score++;
+
+    printf("\nQ3. 5 + 7 = ?\n");
+    printf("1. 10\n2. 12\n3. 14\n4. 15\n");
+    printf("Enter your answer: ");
+    scanf("%d", &answer);
+
+    if(answer == 2)
+        score++;
+
+    printf("\nYour Score = %d/3\n", score);
+
+    return 0;
+}
